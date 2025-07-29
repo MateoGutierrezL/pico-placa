@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consulta Pico y Placa - Valle de Aburrá</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Consulta de Pico y Placa</h1>
+
+    <form id="consultaForm">
+      <label for="municipio">Municipio:</label>
+      <select id="municipio" required>
+        <option value="">Seleccione...</option>
+        <option value="medellin">Medellín</option>
+        <option value="bello">Bello</option>
+        <option value="itagui">Itagüí</option>
+      </select>
+
+      <label for="tipoVehiculo">Tipo de Vehículo:</label>
+      <select id="tipoVehiculo" required>
+        <option value="">Seleccione...</option>
+        <option value="particular">Particular</option>
+        <option value="moto">Moto</option>
+      </select>
+
+      <label for="dia">Día de la Semana:</label>
+      <select id="dia" required>
+        <option value="">Seleccione...</option>
+        <option value="lunes">Lunes</option>
+        <option value="martes">Martes</option>
+        <option value="miercoles">Miércoles</option>
+        <option value="jueves">Jueves</option>
+        <option value="viernes">Viernes</option>
+      </select>
+
+      <label for="digito">Último dígito de la placa:</label>
+      <input type="number" id="digito" min="0" max="9" required />
+
+      <button type="submit">Consultar</button>
+    </form>
+
+    <div id="resultado"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
