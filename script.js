@@ -78,7 +78,6 @@ document.getElementById('consultaForm').addEventListener('submit', function (e) 
   if (!restricciones[municipio] || !restricciones[municipio][dia]) {
     resultado.textContent = "Datos no válidos o día no cubierto.";
     resultado.style.color = "red";
-    return;
   }
 
   const restriccionHoy = restricciones[municipio][dia];
