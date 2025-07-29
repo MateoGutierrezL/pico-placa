@@ -1,25 +1,69 @@
 const restricciones = {
   medellin: {
-    lunes: [0, 1],
-    martes: [2, 3],
-    miercoles: [4, 5],
-    jueves: [6, 7],
-    viernes: [8, 9],
+    lunes: [3, 4],
+    martes: [2, 8],
+    miercoles: [9, 5],
+    jueves: [1, 7],
+    viernes: [0, 6],
   },
   bello: {
-    lunes: [1, 2],
-    martes: [3, 4],
-    miercoles: [5, 6],
-    jueves: [7, 8],
-    viernes: [9, 0],
+    lunes: [1, 7],
+    martes: [0, 3],
+    miercoles: [4, 6],
+    jueves: [5, 9],
+    viernes: [2, 8],
   },
   itagui: {
-    lunes: [2, 3],
-    martes: [4, 5],
-    miercoles: [6, 7],
-    jueves: [8, 9],
-    viernes: [0, 1],
-  }
+    lunes: [1, 7],
+    martes: [3, 0],
+    miercoles: [6, 4],
+    jueves: [5, 9],
+    viernes: [8, 2],
+  },
+  la_estrella: {
+    lunes: [3, 4],
+    martes: [2, 8],
+    miercoles: [5, 9],
+    jueves: [1, 7],
+    viernes: [0, 6],
+  },
+  copacabana: {
+    lunes: [5, 9],
+    martes: [1, 4],
+    miercoles: [2, 0],
+    jueves: [3, 6],
+    viernes: [7, 9],
+  },
+  envigado: {
+    lunes: [6, 9],
+    martes: [5, 7],
+    miercoles: [5, 9],
+    jueves: [1, 7],
+    viernes: [0, 6],
+  },
+  caldas: {
+    lunes: [6, 9],
+    martes: [5, 7],
+    miercoles: [1, 8],
+    jueves: [0, 2],
+    viernes: [3, 4],
+  },
+  girardota: {
+    lunes: [6, 9],
+    martes: [5, 7],
+    miercoles: [5, 9],
+    jueves: [1, 7],
+    viernes: [0, 6],
+  },
+  barbosa: {
+    lunes: [6, 9],
+    martes: [5, 7],
+    miercoles: [5, 9],
+    jueves: [1, 7],
+    viernes: [0, 6],
+  },
+ 
+  
 };
 
 document.getElementById('consultaForm').addEventListener('submit', function (e) {
@@ -40,7 +84,7 @@ document.getElementById('consultaForm').addEventListener('submit', function (e) 
   const restriccionHoy = restricciones[municipio][dia];
 
   if (restriccionHoy.includes(digito)) {
-    resultado.textContent = `¡Atención! Hoy tiene Pico y Placa (${digito}) en ${municipio.toUpperCase()}.`;
+    resultado.textContent = `¡Atención! Hoy tiene Pico y Placa (${digito}) en ${municipio.toUpperCase().replace(/_/g, " ")}.`;
     resultado.style.color = "red";
   } else {
     resultado.textContent = `Puede circular sin restricción. (${digito}) no está restringido hoy.`;
